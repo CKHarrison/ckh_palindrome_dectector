@@ -3,7 +3,11 @@ require "ckh_palindrome/version"
 module CkhPalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.empty?
+      false
+    else
+      processed_content == processed_content.reverse
+    end
   end
 
   private
